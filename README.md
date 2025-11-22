@@ -124,7 +124,7 @@ We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line *
 
 <img width="236" height="44" title = "m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1" alt="image" src="https://github.com/user-attachments/assets/64b7227d-6f5d-4e30-a554-ec2d8ad1d4d0" /> <br />
 
-This code illustrates the above solution:
+This code and its output illustrate the above solution:
 
 ```python 
 import numpy as np
@@ -153,6 +153,10 @@ plt.ylabel("Y")
 plt.xlabel(f"X/Time $t$ [sec]; y = {m}x + {b}")
 plt.title("LS")
 ```
+
+<img width="612" height="512" alt="image" src="https://github.com/user-attachments/assets/8db8b86d-8608-487d-95d5-b2cbbb6faac0" /> <br /><br />
+
+
 
 **Alternative approach using optimal control.**
 
