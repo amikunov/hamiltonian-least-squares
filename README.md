@@ -7,7 +7,7 @@ It is well known how to "go in the *opposite direction*": discrete time Linear Q
 It requires a somewhat artificial high dimensional/formal embedding and it *completely eliminates* traces of the original system's dynamics.
 See this link for details: [[1]](#1).
 
-In contrast, we *directly* map a learning algorithm (like Linear Regression) onto a corresponding optimal control problem, hence treating LS as a dynamic system. 
+In contrast, **we *directly* map a learning algorithm (like Linear Regression) onto a corresponding optimal control problem, hence treating LS as a dynamic system.** 
 
 
 ## 2. Motivation
