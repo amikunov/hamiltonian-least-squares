@@ -110,19 +110,25 @@ After discretizing the cost functional and the dynamics we obtain the following 
 Let's consider a simple linear regression problem and let's first solve it using traditional linear least squares (LLS) and then using our optimal control based approach.
 We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line **y = m * x + b** that fits the data the best by minimizing the sum of squared residuals:
 
-<img width="209" height="26" title = "S(m, b) = r _1 ^2 + r _2 ^2 + r _3 ^2 = " alt="image" src="https://github.com/user-attachments/assets/059e9d00-5280-4739-ada5-c56c1a77ec4e" />
+<img width="209" height="26" title = "S(m, b) = r _1 ^2 + r _2 ^2 + r _3 ^2 = " alt="image" src="https://github.com/user-attachments/assets/78c36dfe-bb37-465d-b6b6-4bc3352b3b5a" />
 
-<img width="334" height="24" title = "(m \cdot 1 + b - 1)^2 + (m \cdot 2 + b - 3)^2 + (m \cdot 3 + b - 2)^2 " alt="image" src="https://github.com/user-attachments/assets/06d5c16f-1578-47df-b1da-1c08ae62501c" />   <br />
+
+<img width="334" height="24" title = "(m \cdot 1 + b - 1)^2 + (m \cdot 2 + b - 3)^2 + (m \cdot 3 + b - 2)^2 " alt="image" src="https://github.com/user-attachments/assets/30432e65-2841-4963-884a-d83d86b233af" />  <br />
+
 
 **LLS gives us the following recipe for finding *m* and *b*:**
 
-<img width="524" height="44" title = "\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;" alt="image" src="https://github.com/user-attachments/assets/820d2cf0-070f-48d5-a8eb-52232244bdd7" />
+<img width="524" height="44" title = "\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;" alt="image" src="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336" />
 
-<img width="524" height="44" title = "\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0." alt="image" src="https://github.com/user-attachments/assets/d4962e8b-be75-44b2-8ce0-e3a12e34a5d2" /> <br />
+
+<img width="524" height="44" title = "\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0." alt="image" src="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e" /> <br />
+
 
 **Simple algebra yields the final answer:**
 
-<img width="236" height="44" title = "m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1" alt="image" src="https://github.com/user-attachments/assets/64b7227d-6f5d-4e30-a554-ec2d8ad1d4d0" /> <br />
+<img width="236" height="44" title = "m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1" alt="image" src="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307" /> <br />
+
+
 
 This code and its output illustrate the above solution:
 
