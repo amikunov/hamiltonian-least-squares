@@ -41,7 +41,7 @@ We also rename the slope *m* to *u* (along with other variables) to follow stand
 
 We can think of it as a solution to the following dynamic equation:
 
-<img width="56" height="39" title = "\frac{dx}{dt} = u" alt="image" src="https://github.com/user-attachments/assets/4d370987-7f8c-451b-a265-67a57421a876" /> <br />
+<img width="56" height="39" title = "\frac{dx}{dt} = u" alt="image" src="https://github.com/user-attachments/assets/5ef15d28-e71c-4cdb-a30c-18e0dabe4f84" /> <br />
 
 with the initial condition: **x(0) = b**.
 
