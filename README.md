@@ -56,7 +56,7 @@ Since *u* is constant, it can also be written as:
 
 An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (a *Bolza* problem, with the *fixed time/free final point* condition):
 
-<img width="268" height="19" alt="image" title = "J = running\,cost + terminal\,cost =" src="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd" /> <br />
+<img width="268" height="19" title = "J = running\,cost + terminal\,cost =" alt="image" src="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd" /> <br />
 
 <img width="308" height="51" title = "\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979" /> <br />
 
@@ -71,39 +71,39 @@ Note, nowhere in our calculations we will ever need the explicit formula for *z(
 
 We form a Hamiltonian (also known as Pontryagin's Hamiltonian) which is typically the sum of the running cost and the costate times dynamics:
 
-<img width="293" height="40" title = "\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u" alt="image" src="https://github.com/user-attachments/assets/b40f114c-928a-46fe-a230-226b3644fa10" /> <br />
+<img width="293" height="40" title = "\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u" alt="image" src="https://github.com/user-attachments/assets/2ec78d19-5ae5-4b7d-866e-8163d6866538" /> <br />
 
 Since (in continuous case):
 
-<img width="155" height="20" title = "x(t) = x(0) + u\cdot t" alt="image" src="https://github.com/user-attachments/assets/3dcf5e53-4156-4b63-a041-827d8a9def1b" /> <br />
+<img width="155" height="20" title = "x(t) = x(0) + u\cdot t" alt="image" src="https://github.com/user-attachments/assets/910b8560-f47e-4154-aca3-201aeb67c74e" /> <br />
 
 the expression for Pontryagin's Hamiltonian becomes:
 
-<img width="351" height="41" title ="\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u" alt="image" src="https://github.com/user-attachments/assets/fae8a633-74f6-4e77-bfed-39099528b206" /> <br />
+<img width="351" height="41" title ="\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u" alt="image" src="https://github.com/user-attachments/assets/31ec249a-ae79-4923-9c51-ab15a9d0fb6e" /> <br />
 
 Then for the costate equation we obtain:
 
-<img width="123" height="41" title = "\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0" alt="image" src="https://github.com/user-attachments/assets/81521010-7447-4338-8e79-5b2f08cff4e7" /> <br />
-
+<img width="123" height="41" title = "\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0" alt="image" src="https://github.com/user-attachments/assets/a837f9aa-9ed4-47f2-bd99-96072950aaeb" /> <br />
 
 Therefore, the costate is constant and we can find its value using the terminal cost condition:
 
-<img width="398" height="44" title = "\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))" alt="image" src="https://github.com/user-attachments/assets/4d1111a5-956b-45ce-a65a-a97040e8cf52" /> <br />
-
+<img width="398" height="44" title = "\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))" alt="image" src="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb" /> <br />
 
 Minimization of the Hamiltonian with respect to *u* yields:
 
-<img width="579" height="40" title = "\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0" alt="image" src="https://github.com/user-attachments/assets/49ec05cd-42fd-4d02-a48b-597f709169ea" /> <br />
+<img width="579" height="40" title = "\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0" alt="image" src="https://github.com/user-attachments/assets/0c0e62c1-33b6-410d-a263-76137e9048d5" /> <br />
+
 
 After discretizing the cost functional and the dynamics we obtain the following optimization problem:
 
 *minimize*
 
-<img width="323" height="60" title = "J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/f05ff3c2-271f-4f7d-ad46-53b9a0419e4f" /> <br />
+<img width="323" height="60" title = "J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900" /> <br />
 
 *subject to*
 
-<img width="287" height="21" title = "x(k + 1) = x(k) + u(k); x(0) = b." alt="image" src="https://github.com/user-attachments/assets/23c66854-f885-4fe9-a31a-13c665f74cc1" /> <br />
+<img width="287" height="21" title = "x(k + 1) = x(k) + u(k); x(0) = b." alt="image" src="https://github.com/user-attachments/assets/8e0b3eef-8b5f-4f8c-b529-2896e39dc36b" /> <br />
+
 
 ## 5. A Linear Regression Problem Solved via Optimal Control
 
