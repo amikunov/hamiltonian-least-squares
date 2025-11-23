@@ -168,19 +168,21 @@ plt.title("LS")
 
 Using the expression for:
 
-<img width="29" height="41" title = "\frac{\partial H}{\partial u}" alt="image" src="https://github.com/user-attachments/assets/501349cc-27a6-4177-b1b5-d92455c50fac" /> <br />
+<img width="29" height="41" title = "\frac{\partial H}{\partial u}" alt="image" src="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71" /> <br />
+
 
 and expanding the gradient of the cost function:
 
-<img width="600" height="58" title = "\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0" alt="image" src="https://github.com/user-attachments/assets/e008a5ab-6503-43f1-842e-6d1154dcca23" /> <br />
+<img width="600" height="58" title = "\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0" alt="image" src="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982" /> <br />
+
 
 we obtain:
 
-<img width="485" height="22" title = "(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0" alt="image" src="https://github.com/user-attachments/assets/47569752-ab84-4320-a869-20ecc5a5de39" /> <br />
+<img width="485" height="22" title = "(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0" alt="image" src="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149" /> <br />
 
 and if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
 
-<img width="197" height="48" title = "u = \frac {1}{2}; x(t) = x(0) + \frac {1}{2} \cdot t" alt="image" src="https://github.com/user-attachments/assets/730e4f64-8164-4a1d-862e-f8bc21f0f4f7" /> <br />
+<img width="197" height="48" title = "u = \frac {1}{2}; x(t) = x(0) + \frac {1}{2} \cdot t" alt="image" src="https://github.com/user-attachments/assets/efa80183-caad-476a-aa99-2eb67e8e95ec" /> <br />
 
 
 ## References
