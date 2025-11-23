@@ -56,13 +56,13 @@ Since *u* is constant, it can also be written as:
 
 An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (a *Bolza* problem, with the *fixed time/free final point* condition):
 
-<img width="268" height="19" alt="image" title = "J = running\,cost + terminal\,cost =" src="https://github.com/user-attachments/assets/1b6b35da-5935-4736-a5ae-c3cdf3e472c2" /> <br />
+<img width="268" height="19" alt="image" title = "J = running\,cost + terminal\,cost =" src="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd" /> <br />
 
-<img width="308" height="51" title = "\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/2e5fd640-d9bb-48e0-bf96-945305b8c38b" /> <br />
+<img width="308" height="51" title = "\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979" /> <br />
 
 where *z(t)* can be approximated, say, by a spline function (spline interpolation) passing through a set of N data points (coordinate pairs of *(t, z(t)).* And *x(t)* is satisfying the dynamic constraint:
 
-<img width="56" height="39" title = "\dot{x} = u" alt="image" src="https://github.com/user-attachments/assets/4b87f49d-9e59-41c7-958d-8466cf95692b" /> <br />
+<img width="56" height="39" title = "\dot{x} = u" alt="image" src="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5" /> <br />
 
 Note, nowhere in our calculations we will ever need the explicit formula for *z(t).* We only interested in z's values at the N data points:
 *z(1), z(2), z(3), ..., z(N).* We also use what's called a *"soft"* terminal constraint with an adjustable weight *g.* 
