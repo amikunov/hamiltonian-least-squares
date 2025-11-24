@@ -245,7 +245,7 @@ and expanding the gradient of the cost function:
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/291013bb-3aa4-4e8c-b7cd-1abb8047380a">  
-  <img width="600" height="58" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982" >
+  <img width="600" height="54" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982" >
 </picture>    <br />    <br />
 
 we obtain:
@@ -253,7 +253,7 @@ we obtain:
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/b51e5ba4-7fde-44cd-807d-48102707923c">  
-  <img width="485" height="22" title = "\bbox[black]{\color{white}(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149" > 
+  <img width="485" height="20" title = "\bbox[black]{\color{white}(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149" > 
 </picture>    <br />    <br />
 
 and if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
