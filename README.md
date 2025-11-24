@@ -103,15 +103,27 @@ Since (in continuous case):
 
 the expression for Pontryagin's Hamiltonian becomes:
 
-<img width="351" height="41" title ="\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u" alt="image" src="https://github.com/user-attachments/assets/31ec249a-ae79-4923-9c51-ab15a9d0fb6e" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/31ec249a-ae79-4923-9c51-ab15a9d0fb6e"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8979626e-1838-49b3-a9d7-428af7c7bf4c">  
+  <img width="351" height="42" title ="\bbox[black]{\color{white}\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u}" alt="fallback image" src="https://github.com/user-attachments/assets/31ec249a-ae79-4923-9c51-ab15a9d0fb6e" >
+</picture>   <br /> <br />
 
 Then for the costate equation we obtain:
 
-<img width="123" height="41" title = "\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0" alt="image" src="https://github.com/user-attachments/assets/a837f9aa-9ed4-47f2-bd99-96072950aaeb" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/a837f9aa-9ed4-47f2-bd99-96072950aaeb"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/57085eb3-de6a-41c4-ac5e-1c04ca47f436">  
+  <img width="124" height="42" title = "\bbox[black]{\color{white}\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/a837f9aa-9ed4-47f2-bd99-96072950aaeb">
+</picture>   <br /> <br />
 
 Therefore, the costate is constant and we can find its value using the terminal cost condition:
 
-<img width="398" height="44" title = "\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))" alt="image" src="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/cb9c5fa3-bfbe-4ebe-8c1b-5971f81479ab">  
+  <img width="400" height="46" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb" >
+</picture>   <br /> <br />
 
 Minimization of the Hamiltonian with respect to *u* yields:
 
