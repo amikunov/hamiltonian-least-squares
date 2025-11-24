@@ -87,11 +87,19 @@ Note, nowhere in our calculations we will ever need the explicit formula for *z(
 
 We form a Hamiltonian (also known as Pontryagin's Hamiltonian) which is typically the sum of the running cost and the costate times dynamics:
 
-<img width="293" height="40" title = "\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u" alt="image" src="https://github.com/user-attachments/assets/2ec78d19-5ae5-4b7d-866e-8163d6866538" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/2ec78d19-5ae5-4b7d-866e-8163d6866538"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/6a3933bb-f1a8-49c3-8dd5-b0a1603b95ba">  
+  <img width="304" height="42" title = "\bbox[black]{\color{white}\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u}" alt="fallback image" src="https://github.com/user-attachments/assets/2ec78d19-5ae5-4b7d-866e-8163d6866538" >
+</picture>   <br /> <br />
 
 Since (in continuous case):
 
-<img width="155" height="20" title = "x(t) = x(0) + u\cdot t" alt="image" src="https://github.com/user-attachments/assets/910b8560-f47e-4154-aca3-201aeb67c74e" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/910b8560-f47e-4154-aca3-201aeb67c74e"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/47626c44-de6b-4037-9ac1-ed639673d6ad">  
+  <img width="158" height="22" title = "x(t) = x(0) + u\cdot t" alt="fallback image" src="https://github.com/user-attachments/assets/910b8560-f47e-4154-aca3-201aeb67c74e" >
+</picture>   <br /> <br />
 
 the expression for Pontryagin's Hamiltonian becomes:
 
