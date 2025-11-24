@@ -42,10 +42,10 @@ We also rename the slope *m* to *u* (along with other variables) to follow stand
 We can think of it as a solution to the following dynamic equation:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1a074ad8-e46a-47c4-923b-66824b19e362"> 
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/5ef15d28-e71c-4cdb-a30c-18e0dabe4f84"> 
-  <img width="56" height="39" title = "\bbox[black]{\color{white}\frac{dx}{dt} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/5ef15d28-e71c-4cdb-a30c-18e0dabe4f84"> 
-</picture>  <br />  
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1a074ad8-e46a-47c4-923b-66824b19e362">  
+  <img width="56" height="39" title = "\bbox[black]{\color{white}\frac{dx}{dt} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/5ef15d28-e71c-4cdb-a30c-18e0dabe4f84">
+</picture>      <br />   <br />  
 
 with the initial condition: **x(0) = b**.
 
@@ -60,13 +60,21 @@ Since *u* is constant, it can also be written as:
 
 An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (a *Bolza* problem, with the *fixed time/free final point* condition):
 
-<img width="268" height="19" title = "J = running\,cost + terminal\,cost =" alt="image" src="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0a55c3cf-6d9a-403f-bdc4-3bf46e738bcd">  
+  <img width="268" height="19" title = "\bbox[black]{\color{white}J = running\,cost + terminal\,cost =}" alt="fallback image" src="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd">
+</picture>      <br /> 
 
-<img width="308" height="51" title = "\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/66e930bc-52f8-4611-972f-0024c034c4f0">  
+  <img width="308" height="51" title = "\bbox[black]{\color{white}\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2}" alt="fallback image" src="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979">
+</picture>      <br />   <br />
 
 where *z(t)* can be approximated, say, by a spline function (spline interpolation) passing through a set of N data points (coordinate pairs of *(t, z(t)).* And *x(t)* is satisfying the dynamic constraint:
 
-<img width="56" height="39" title = "\dot{x} = u" alt="image" src="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5" /> <br />
+<img width="56" height="39" title = "\bbox[black]{\color{white}\dot{x} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5" />  <br />
 
 Note, nowhere in our calculations we will ever need the explicit formula for *z(t).* We only interested in z's values at the N data points:
 *z(1), z(2), z(3), ..., z(N).* We also use what's called a *"soft"* terminal constraint with an adjustable weight *g.* 
