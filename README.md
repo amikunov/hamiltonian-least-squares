@@ -122,23 +122,35 @@ Therefore, the costate is constant and we can find its value using the terminal 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/cb9c5fa3-bfbe-4ebe-8c1b-5971f81479ab">  
-  <img width="400" height="46" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb" >
+  <img width="400" height="45" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb" >
 </picture>   <br /> <br />
 
 Minimization of the Hamiltonian with respect to *u* yields:
 
-<img width="579" height="40" title = "\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0" alt="image" src="https://github.com/user-attachments/assets/0c0e62c1-33b6-410d-a263-76137e9048d5" /> <br />
-
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/0c0e62c1-33b6-410d-a263-76137e9048d5"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/86f7d352-c0a1-41ca-8464-18281278a336">  
+  <img width="580" height="41" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/0c0e62c1-33b6-410d-a263-76137e9048d5" >
+</picture>   <br /> <br />
 
 After discretizing the cost functional and the dynamics we obtain the following optimization problem:
 
 *minimize*
 
-<img width="323" height="60" title = "J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2" alt="image" src="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/7db73ea0-9fe9-49e2-8212-e3199119ebe6">  
+  <img width="325" height="62" title = "\bbox[black]{\color{white}J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2}" alt="fallback image" src="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900" >
+</picture>   <br /> <br />
 
 *subject to*
 
-<img width="287" height="21" title = "x(k + 1) = x(k) + u(k); x(0) = b." alt="image" src="https://github.com/user-attachments/assets/8e0b3eef-8b5f-4f8c-b529-2896e39dc36b" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8e0b3eef-8b5f-4f8c-b529-2896e39dc36b"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/aa348cb3-285d-45ef-ab68-0ef29e96df52">  
+  <img width="288" height="22" title = "\bbox[black]{\color{white}x(k + 1) = x(k) + u(k); x(0) = b.}" alt="fallback image" src="https://github.com/user-attachments/assets/8e0b3eef-8b5f-4f8c-b529-2896e39dc36b">
+</picture>   <br /> <br />
+
 
 
 ## 5. A Linear Regression Problem Solved via Optimal Control
