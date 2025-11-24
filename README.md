@@ -173,16 +173,27 @@ We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line *
 
 **LLS gives us the following recipe for finding *m* and *b*:**
 
-<img width="524" height="44" title = "\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;" alt="image" src="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8c75db6f-158e-4426-86d2-e54e1f01f321">  
+  <img width="524" height="44" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;}" alt="fallback image" src="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336" >
+</picture>   <br />    <br />
 
 
-<img width="524" height="44" title = "\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0." alt="image" src="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/86bf73c7-ca3b-4752-977b-cfd6062a9cdc">  
+  <img width="524" height="44" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.}" alt="fallback image" src="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e" >
+</picture>    <br />    <br />
 
 
 **Simple algebra yields the final answer:**
 
-<img width="236" height="44" title = "m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1" alt="image" src="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307" /> <br />
-
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/143b9528-6066-4ec9-862c-29325873d16e">  
+  <img width="236" height="44" title = "\bbox[black]{\color{white}m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1}" alt="fallback image" src="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
+</picture>    <br />    <br />
 
 
 This code and its output illustrate the above solution:
