@@ -176,14 +176,14 @@ We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line *
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8c75db6f-158e-4426-86d2-e54e1f01f321">  
-  <img width="524" height="44" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;}" alt="fallback image" src="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336" >
+  <img width="524" height="43" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;}" alt="fallback image" src="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336" >
 </picture>   <br />    <br />
 
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/86bf73c7-ca3b-4752-977b-cfd6062a9cdc">  
-  <img width="524" height="44" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.}" alt="fallback image" src="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e" >
+  <img width="524" height="43" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.}" alt="fallback image" src="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e" >
 </picture>    <br />    <br />
 
 
@@ -192,7 +192,7 @@ We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line *
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/143b9528-6066-4ec9-862c-29325873d16e">  
-  <img width="236" height="44" title = "\bbox[black]{\color{white}m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1}" alt="fallback image" src="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
+  <img width="236" height="43" title = "\bbox[black]{\color{white}m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1}" alt="fallback image" src="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
 </picture>    <br />    <br />
 
 
@@ -234,21 +234,36 @@ plt.title("LS")
 
 Using the expression for:
 
-<img width="29" height="41" title = "\frac{\partial H}{\partial u}" alt="image" src="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71" /> <br />
-
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/321b20ab-3442-409c-937e-293a6b517baa">  
+  <img width="29" height="41" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u}}" alt="fallback image" src="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71" > 
+</picture>    <br />    <br />
 
 and expanding the gradient of the cost function:
 
-<img width="600" height="58" title = "\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0" alt="image" src="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982" /> <br />
-
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/291013bb-3aa4-4e8c-b7cd-1abb8047380a">  
+  <img width="600" height="58" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982" >
+</picture>    <br />    <br />
 
 we obtain:
 
-<img width="485" height="22" title = "(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0" alt="image" src="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/b51e5ba4-7fde-44cd-807d-48102707923c">  
+  <img width="485" height="22" title = "\bbox[black]{\color{white}(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149" > 
+</picture>    <br />    <br />
 
 and if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
 
-<img width="197" height="48" title = "u = \frac {1}{2}; x(t) = x(0) + \frac {1}{2} \cdot t" alt="image" src="https://github.com/user-attachments/assets/efa80183-caad-476a-aa99-2eb67e8e95ec" /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/efa80183-caad-476a-aa99-2eb67e8e95ec"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a4070b2b-9905-47a1-8fdf-99a91ac80f71">  
+  <img width="197" height="44" title = "\bbox[black]{\color{white}u = \frac {1}{2}; x(t) = x(0) + \frac {1}{2} \cdot t}" alt="fallback image" src="https://github.com/user-attachments/assets/efa80183-caad-476a-aa99-2eb67e8e95ec" >
+</picture>    <br />    <br />
+
 
 
 ## References
