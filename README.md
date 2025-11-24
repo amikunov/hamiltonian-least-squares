@@ -74,7 +74,11 @@ An optimization problem can be thought of as finding an optimal control *u* (the
 
 where *z(t)* can be approximated, say, by a spline function (spline interpolation) passing through a set of N data points (coordinate pairs of *(t, z(t)).* And *x(t)* is satisfying the dynamic constraint:
 
-<img width="56" height="39" title = "\bbox[black]{\color{white}\dot{x} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5" />  <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/f4ee00ae-2b21-4f1e-b5c2-9d060374f0f0">  
+  <img width="55" height="15" title = "\bbox[black]{\color{white}\dot{x} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5">
+</picture>   <br /> <br />
 
 Note, nowhere in our calculations we will ever need the explicit formula for *z(t).* We only interested in z's values at the N data points:
 *z(1), z(2), z(3), ..., z(N).* We also use what's called a *"soft"* terminal constraint with an adjustable weight *g.* 
