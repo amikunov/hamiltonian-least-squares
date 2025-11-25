@@ -120,9 +120,14 @@ Then for the costate equation we obtain:
 Therefore, the costate is constant and we can find its value using the terminal cost condition:
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/cb9c5fa3-bfbe-4ebe-8c1b-5971f81479ab">  
-  <img width="400" height="44" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/8bb4a903-43fd-44c7-ace2-432fc9762ecb" >
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/264aa445-b30e-43b0-8870-56ea18f4d40b">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/5d93fd8a-5250-400e-95fc-f9d37ae6a7d8">
+  <img width="320 height="42" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/264aa445-b30e-43b0-8870-56ea18f4d40b" >
+</picture>   <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/70bd6475-94cc-4bb5-82dc-1f96c0fbede4"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/763de0c5-77fa-420f-8709-5d0f394ee196"> 
+  <img width="140" height="20" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/70bd6475-94cc-4bb5-82dc-1f96c0fbede4" >
 </picture>   <br /> <br />
 
 Minimization of the Hamiltonian with respect to *u* yields:
