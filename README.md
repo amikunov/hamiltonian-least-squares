@@ -133,9 +133,14 @@ Therefore, the costate is constant and we can find its value using the terminal 
 Minimization of the Hamiltonian with respect to *u* yields:
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/0c0e62c1-33b6-410d-a263-76137e9048d5"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/86f7d352-c0a1-41ca-8464-18281278a336">  
-  <img width="580" height="40" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/0c0e62c1-33b6-410d-a263-76137e9048d5" >
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/af68fd86-7a40-4e9e-810b-51ccbde4a505"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/e67694d1-e50c-4433-a9b5-5ce9f3700772">
+  <img width="320" height="42" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/af68fd86-7a40-4e9e-810b-51ccbde4a505" >
+</picture>   <br /> <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/1e63a2d9-82dc-4671-ae84-41164df113a8">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a85e15aa-3db5-490a-9705-4f84e4e273a7">
+  <img width="360" height="22" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/1e63a2d9-82dc-4671-ae84-41164df113a8" >
 </picture>   <br /> <br />
 
 After discretizing the cost functional and the dynamics we obtain the following optimization problem:
@@ -145,7 +150,7 @@ After discretizing the cost functional and the dynamics we obtain the following 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900"> 
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/7db73ea0-9fe9-49e2-8212-e3199119ebe6">  
-  <img width="325" height="61" title = "\bbox[black]{\color{white}J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2}" alt="fallback image" src="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900" >
+  <img width="360" height="66" title = "\bbox[black]{\color{white}J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2}" alt="fallback image" src="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900" >
 </picture>   <br /> <br />
 
 *subject to*
