@@ -4,8 +4,8 @@ In this note we show how to explicitly solve Least Squares (e.g. Linear Regressi
 ## 1. Introduction
 
 It is well known how to "go in the *opposite direction*": discrete time Linear Quadratic Regulator (LQR) can be solved via Least Squares (LS).
-It requires a somewhat artificial high dimensional/formal embedding and it *completely eliminates* traces of the original system's dynamics.
-See this link for details: [[1]](#1).
+(See this link for details: [[1]](#1).)
+The approach requires a somewhat artificial high dimensional/formal embedding and it *completely eliminates* traces of the original system's dynamics.
 
 In contrast, **we *directly* map a learning algorithm (like Linear Regression) onto a corresponding optimal control problem, hence treating LS as a dynamic system.** 
 
