@@ -250,12 +250,17 @@ Using the expression for:
   <img width="29" height="41" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u}}" alt="fallback image" src="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71" > 
 </picture>    <br />    <br />
 
-and expanding the gradient of the cost function:
+and expanding the gradient of the cost functional:
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/291013bb-3aa4-4e8c-b7cd-1abb8047380a">  
-  <img width="600" height="54" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/875de9d4-7aed-4d70-854c-8006ecc4e982" >
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/c9832216-7671-4790-9270-3aa3748dd0f0"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1bbbd71a-8b26-4144-a278-194889a0883a">  
+  <img width="310" height="58" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/c9832216-7671-4790-9270-3aa3748dd0f0" >
+</picture>    <br />    <br />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/3bbb9a39-bec8-4ca5-92e6-3b7ff983835f"> 
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/495d2548-65d8-41d9-819f-be3bfe218e57">  
+  <img width="350" height="58" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/3bbb9a39-bec8-4ca5-92e6-3b7ff983835f" >
 </picture>    <br />    <br />
 
 we obtain:
