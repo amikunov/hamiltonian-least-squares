@@ -19,8 +19,8 @@ Then "forward" (state) and "backward" (costate) dynamics (both continuous and di
 - These ideas can be traced back to this classic unparalleled book: [[2]](#2). 
 Also, see these amazing articles for more recent updates: [[3]](#3), [[4]](#4)
 
-2.2. Direct mapping to a Hamiltonian system allows one to study machine learning via modern mathematics.
-- **In the sequel we will describe some of the intrinsic structures associated with these mappings**
+2.2. Direct connection with a Hamiltonian system allows one to study machine learning via advanced mathematics.
+- **In the sequel we will describe some of the intrinsic structures associated with such mappings**
 
 ## 3. Outline Of Work
 - Linear Regression to Optimal Control *explicit/direct* mapping
