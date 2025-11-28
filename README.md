@@ -49,7 +49,7 @@ We can think of it as a solution to the following dynamic equation:
 
 with the initial condition: **x(0) = b**.
 
-We can also discretize it (e.g. with 1 second time step) to obtain (think an Euler like forward approximation):
+We can also discretize it (e.g. with a 1-second time step) to obtain (think an Euler like forward approximation with total steps = time interval / step):
 
 **x(k+1) = x(k) + u(k)**, where **u(k)= u(k+1) = const.**
 
@@ -80,7 +80,7 @@ where *z(t)* can be approximated, say, by a spline function (spline interpolatio
   <img width="56" height="18" title = "\bbox[black]{\color{white}\dot{x} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/92c1d1a4-2ab2-43a1-87ad-e6474af19ed5">
 </picture>   <br /> <br />
 
-Note, nowhere in our calculations we will ever need the explicit formula for *z(t).* We only interested in z's values at the N data points:
+Note that in discrete case, nowhere in our calculations we will ever need the explicit formula for *z(t).* We are only interested in z's values at the N data points:
 *z(1), z(2), z(3), ..., z(N).* We also use what's called a *"soft"* terminal constraint with an adjustable weight *g.* 
 
 **Unlike the [Linear Quadratic] Tracking Control problem (or similar trajectory optimization tasks) we do not follow *z(t)* (aka "reference trajectory"). Instead our system always stays on a straight line, and we only control the slope.**
