@@ -58,7 +58,7 @@ Since *u* is constant, it can also be written as:
 **x(k) = x(0) + u * k.**
 
 
-An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (a *Bolza* problem, with the *fixed time/free final point* condition):
+An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (which is a *Bolza* problem, with the *fixed time/free final point* condition):
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd"> 
@@ -163,7 +163,7 @@ After discretizing the cost functional and the dynamics we obtain the following 
 
 
 
-## 5. A Linear Regression Problem Solved via Optimal Control
+## 5. A Linear Regression Problem Solved Via Optimal Control
 
 Let's consider a simple linear regression problem and let's first solve it using traditional linear least squares (LLS) and then using our optimal control based approach.
 We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line **y = m * x + b** that fits the data the best by minimizing the sum of squared residuals:
