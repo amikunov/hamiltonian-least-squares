@@ -242,7 +242,7 @@ plt.title("LS")
 
 
 
-**5.2 Alternative Approach Via The Hamiltonian method.**
+**5.2 Alternative Approach Via The Hamiltonian Of Control Theory.**
 
 Using the expression for:
 
