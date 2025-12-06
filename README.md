@@ -12,7 +12,7 @@ In contrast, **we *directly* map a learning algorithm (like Linear Regression) o
 
 ## 2. Motivation
 2.1. We take a fresh look at the link between Artificial Neural Networks and Dynamic Systems.
-- In a typical approach the connection is established via an interplay between Lagrangian multipliers and the backpropagation algorithm.
+- In a typical approach the connection is established via an interplay between Lagrangian multipliers (Karush-Kuhn-Tucker conditions) and the backpropagation algorithm.
 Optionally, a link with Hamiltonian mechanics is used (via Pontryagin's maximum principle and Pontryagin's Hamiltonian).
 Then "forward" (state) and "backward" (costate) dynamics (both continuous and discrete time) are numerically simulated.
 
@@ -165,6 +165,8 @@ After discretizing the cost functional and the dynamics we obtain the following 
 
 ## 5. A Linear Regression Problem Solved Via Optimal Control
 
+**5.1 Standard Least Squares.**
+
 Let's consider a simple linear regression problem and let's first solve it using traditional linear least squares (LLS) and then using our optimal control based approach.
 We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line **y = m * x + b** that fits the data the best by minimizing the sum of squared residuals:
 
@@ -240,7 +242,7 @@ plt.title("LS")
 
 
 
-**Alternative approach using optimal control.**
+**5.2 Alternative Approach Via The Hamiltonian method.**
 
 Using the expression for:
 
