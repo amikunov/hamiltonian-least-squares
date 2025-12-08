@@ -13,7 +13,7 @@ In contrast, **we *directly* map a learning algorithm (like Linear Regression) o
 ## 2. Motivation
 2.1. We take a fresh look at the link between Artificial Neural Networks and Dynamic Systems.
 - In a typical approach the connection is established via an interplay between Lagrangian multipliers (Karush-Kuhn-Tucker conditions) and the backpropagation algorithm.
-Optionally, a link with Hamiltonian mechanics is used (via Pontryagin's maximum principle and Pontryagin's Hamiltonian).
+Optionally, a link with Hamiltonian mechanics is used (via Pontryagin's maximum principle and the control Hamiltonian).
 Then "forward" (state) and "backward" (costate) dynamics (both continuous and discrete time) are numerically simulated.
 
 - These ideas can be traced back to this classic unparalleled book: [[2]](#2). 
@@ -226,19 +226,20 @@ coefficients, residuals, rank, singular_values = np.linalg.lstsq(A, y, rcond=Non
 
 m, b = coefficients[0], coefficients[1]
 
-print(f"Slope (m): {m}")
-print(f"Intercept (b): {b}")
+print(f"Slope (m): {m:.2f}")
+print(f"Intercept (b): {b:.2f}")
 
 y_values = m * x + b
 
 plt.plot(x, y, "--")
 plt.plot(x, y_values)
 plt.ylabel("Y")
-plt.xlabel(f"X/Time $t$ [sec]; y = {m}x + {b}")
+plt.xlabel(f"X/Time $t$ [sec]; y = {m:.2f}x + {b:.2f}")
 plt.title("LS")
 ```
 
-<img width="612" height="512" alt="image" src="https://github.com/user-attachments/assets/8db8b86d-8608-487d-95d5-b2cbbb6faac0" /> <br /><br />
+<img width="615" height="508" alt="image" src="https://github.com/user-attachments/assets/1095e352-e93e-4d69-9067-9e9151e9703d" /> <br /><br />
+
 
 
 
