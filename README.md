@@ -30,28 +30,28 @@ Also, see these amazing articles for more recent updates: [[3]](#3), [[4]](#4)
 We observe that Linear Regression (LR) in the most basic form, using least squares, can be understood dynamically:
 we are simply building a straight line
 
-**y = m * x + b**,
+$\Large\ y = m * x + b,$
 
 whose slope *m* and y-intercept *b* are adjusted to minimize a sum of squared errors between predicted and actual (measured) y values.
 The dynamic nature becomes even more apparent if we treat *x* as a time coordinate (continuous or discrete) and y as a dynamic state variable. 
 
 We also rename the slope *m* to *u* (along with other variables) to follow standard optimal control conventions. Hence we get:
 
-**x(t) = x(0) + u * t**. 
+$\Large\ x(t) = x(0) + u * t.$
 
 We can think of it as a solution to the following dynamic equation:
 
 $\Large\frac{dx}{dt} = u$
 
-with the initial condition: **x(0) = b**.
+with the initial condition: $`\Large\ x(0) = b.`$
 
 We can also discretize it (e.g. with a 1-second time step) to obtain (think an Euler like forward approximation with total steps = time interval / step):
 
-**x(k+1) = x(k) + u(k)**, where **u(k)= u(k+1) = const.**
+$`\Large\ x(k+1) = x(k) + u(k)`$, where $`\Large\ u(k)= u(k+1) = const.`$
 
 Since *u* is constant, it can also be written as:
 
-**x(k) = x(0) + u * k.**
+$\Large\ x(k) = x(0) + u * k.$
 
 
 An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (which is a *Bolza* problem, with the *fixed time/free final point* condition):
