@@ -41,7 +41,7 @@ $\large\ x(t) = x(0) + u \cdot t.$
 
 We can think of it as a solution to the following dynamic equation:
 
-$\large\frac{dx}{dt} = u$
+$\Large\frac{dx}{dt} = u$
 
 with the initial condition: $`\large\ x(0) = b.`$
 
@@ -62,7 +62,7 @@ $\large\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T
 
 where *z(t)* can be approximated, say, by a spline function (spline interpolation) passing through a set of N data points (coordinate pairs of *(t, z(t)).* And *x(t)* is satisfying the dynamic constraint:
 
-$\large\dot{x} = u$
+$\Large\dot{x} = u$
 
 Note that in discrete case, nowhere in our calculations we will ever need the explicit formula for *z(t).* We are only interested in z's values at the N data points:
 *z(1), z(2), z(3), ..., z(N).* We also use what's called a *"soft"* terminal constraint with an adjustable weight *g.* 
@@ -83,7 +83,7 @@ $\large\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) 
 
 Then for the costate equation we obtain:
 
-$\large\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0$
+$\Large\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0$
 
 <br />
 
@@ -182,7 +182,7 @@ plt.title("LS")
 
 Using the expression for:
 
-$\large\frac{\partial H}{\partial u}$
+$\Large\frac{\partial H}{\partial u}$
 
 <br />
 
