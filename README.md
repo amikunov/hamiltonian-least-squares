@@ -30,39 +30,39 @@ Also, see these amazing articles for more recent updates: [[3]](#3), [[4]](#4)
 We observe that Linear Regression (LR) in the most basic form, using least squares, can be understood dynamically:
 we are simply building a straight line
 
-$\Large\ y = m * x + b,$
+$\large\ y = m * x + b,$
 
 whose slope *m* and y-intercept *b* are adjusted to minimize a sum of squared errors between predicted and actual (measured) y values.
 The dynamic nature becomes even more apparent if we treat *x* as a time coordinate (continuous or discrete) and y as a dynamic state variable. 
 
 We also rename the slope *m* to *u* (along with other variables) to follow standard optimal control conventions. Hence we get:
 
-$\Large\ x(t) = x(0) + u * t.$
+$\large\ x(t) = x(0) + u * t.$
 
 We can think of it as a solution to the following dynamic equation:
 
-$\Large\frac{dx}{dt} = u$
+$\large\frac{dx}{dt} = u$
 
-with the initial condition: $`\Large\ x(0) = b.`$
+with the initial condition: $`\large\ x(0) = b.`$
 
 We can also discretize it (e.g. with a 1-second time step) to obtain (think an Euler like forward approximation with total steps = time interval / step):
 
-$`\Large\ x(k+1) = x(k) + u(k)`$, where $`\Large\ u(k)= u(k+1) = const.`$
+$`\large\ x(k+1) = x(k) + u(k)`$, where $`\large\ u(k)= u(k+1) = const.`$
 
 Since *u* is constant, it can also be written as:
 
-$\Large\ x(k) = x(0) + u * k.$
+$\large\ x(k) = x(0) + u * k.$
 
 
 An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (which is a *Bolza* problem, with the *fixed time/free final point* condition):
 
-$\Large\ J = running\ cost + terminal\ cost = $
+$\large\ J = running\ cost + terminal\ cost = $
 
-$\Large\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2$
+$\large\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2$
 
 where *z(t)* can be approximated, say, by a spline function (spline interpolation) passing through a set of N data points (coordinate pairs of *(t, z(t)).* And *x(t)* is satisfying the dynamic constraint:
 
-$\Large\dot{x} = u$
+$\large\dot{x} = u$
 
 Note that in discrete case, nowhere in our calculations we will ever need the explicit formula for *z(t).* We are only interested in z's values at the N data points:
 *z(1), z(2), z(3), ..., z(N).* We also use what's called a *"soft"* terminal constraint with an adjustable weight *g.* 
@@ -71,33 +71,33 @@ Note that in discrete case, nowhere in our calculations we will ever need the ex
 
 We form a Hamiltonian (also known as Pontryagin's Hamiltonian) which is typically the sum of the running cost and the costate times dynamics:
 
-$\Large\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u$
+$\large\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u$
 
 Since (in continuous case):
 
-$\Large\ x(t) = x(0) + u\cdot t$
+$\large\ x(t) = x(0) + u\cdot t$
 
 the expression for Pontryagin's Hamiltonian becomes:
 
-$\Large\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u$
+$\large\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u$
 
 Then for the costate equation we obtain:
 
-$\Large\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0$
+$\large\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0$
 
 <br />
 
 Therefore, the costate is constant and we can find its value using the terminal cost condition:
 
-$\Large\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))$
+$\large\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))$
 
 <br />
 
 Minimization of the Hamiltonian with respect to *u* yields:
 
-$\Large\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = $
+$\large\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = $
 
-$\Large (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0$
+$\large (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0$
 
 <br />
 
@@ -105,11 +105,11 @@ After discretizing the cost functional and the dynamics we obtain the following 
 
 *minimize*
 
-$\Large\ J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2$
+$\large\ J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2$
 
 *subject to*
 
-$\Large\ x(k + 1) = x(k) + u(k);\ x(0) = b.$
+$\large\ x(k + 1) = x(k) + u(k);\ x(0) = b.$
 
 <br />
 
@@ -120,25 +120,25 @@ $\Large\ x(k + 1) = x(k) + u(k);\ x(0) = b.$
 Let's consider a simple linear regression problem and let's first solve it using traditional linear least squares (LLS) and then using our optimal control based approach.
 We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line **y = m * x + b** that fits the data the best by minimizing the sum of squared residuals:
 
-$\Large\ S(m, b) = r _1 ^2 + r _2 ^2 + r _3 ^2 = $
+$\large\ S(m, b) = r _1 ^2 + r _2 ^2 + r _3 ^2 = $
 
-$\Large\ (m \cdot 1 + b - 1)^2 + (m \cdot 2 + b - 3)^2 + (m \cdot 3 + b - 2)^2 $
+$\large\ (m \cdot 1 + b - 1)^2 + (m \cdot 2 + b - 3)^2 + (m \cdot 3 + b - 2)^2 $
 
 <br />
 
 
 **LLS gives us the following recipe for finding *m* and *b*:**
 
-$\Large\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;$
+$\large\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;$
 
-$\Large\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.$
+$\large\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.$
 
 <br />
 
 
 **Simple algebra yields the final answer:**
 
-$\Large\ m = \frac {1}{2};\ b = 1;\ y = \frac {1}{2} \cdot x + 1$
+$\large\ m = \frac {1}{2};\ b = 1;\ y = \frac {1}{2} \cdot x + 1$
 
 <br />
 
@@ -182,27 +182,27 @@ plt.title("LS")
 
 Using the expression for:
 
-$\Large\frac{\partial H}{\partial u}$
+$\large\frac{\partial H}{\partial u}$
 
 <br />
 
 and expanding the gradient of the cost functional:
 
-$\Large\nabla_u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = $
+$\large\nabla_u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = $
 
-$\Large\sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0$
+$\large\sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0$
 
 <br />
 
 we obtain:
 
-$\Large\ (x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0$
+$\large\ (x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0$
 
 <br />
 
 and if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
 
-$\Large\ u = \frac {1}{2};\ x(t) = x(0) + \frac {1}{2} \cdot t$
+$\large\ u = \frac {1}{2};\ x(t) = x(0) + \frac {1}{2} \cdot t$
 
 <br />
 <br />
