@@ -41,11 +41,7 @@ We also rename the slope *m* to *u* (along with other variables) to follow stand
 
 We can think of it as a solution to the following dynamic equation:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/5ef15d28-e71c-4cdb-a30c-18e0dabe4f84"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1a074ad8-e46a-47c4-923b-66824b19e362">  
-  <img width="56" height="39" title = "\bbox[black]{\color{white}\frac{dx}{dt} = u}" alt="fallback image" src="https://github.com/user-attachments/assets/5ef15d28-e71c-4cdb-a30c-18e0dabe4f84">
-</picture>      <br />   <br />  
+$\Large\frac{dx}{dt} = u$
 
 with the initial condition: **x(0) = b**.
 
@@ -60,17 +56,9 @@ Since *u* is constant, it can also be written as:
 
 An optimization problem can be thought of as finding an optimal control *u* (the line's slope) such that it minimizes the sum of squared errors between predicted and measured states. In other words we want to minimize the following cost functional (which is a *Bolza* problem, with the *fixed time/free final point* condition):
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0a55c3cf-6d9a-403f-bdc4-3bf46e738bcd">  
-  <img width="268" height="19" title = "\bbox[black]{\color{white}J = running\,cost + terminal\,cost =}" alt="fallback image" src="https://github.com/user-attachments/assets/262855c3-612b-4c66-891d-4e26901b04bd">
-</picture>      <br /> 
+$\Large\ J = running\ cost + terminal\ cost = $
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/66e930bc-52f8-4611-972f-0024c034c4f0">  
-  <img width="308" height="51" title = "\bbox[black]{\color{white}\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2}" alt="fallback image" src="https://github.com/user-attachments/assets/9b421efb-ba39-4383-907e-fcdb66ab0979">
-</picture>      <br />   <br />
+$\Large\frac{1}{2}\int_{0}^{T}(x(t) - z(t))^2 \mathrm{d}t +\frac{1}{2}g\cdot(x(T) - z(T))^2$
 
 where *z(t)* can be approximated, say, by a spline function (spline interpolation) passing through a set of N data points (coordinate pairs of *(t, z(t)).* And *x(t)* is satisfying the dynamic constraint:
 
@@ -83,81 +71,47 @@ Note that in discrete case, nowhere in our calculations we will ever need the ex
 
 We form a Hamiltonian (also known as Pontryagin's Hamiltonian) which is typically the sum of the running cost and the costate times dynamics:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/2ec78d19-5ae5-4b7d-866e-8163d6866538"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/6a3933bb-f1a8-49c3-8dd5-b0a1603b95ba">  
-  <img width="304" height="42" title = "\bbox[black]{\color{white}\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u}" alt="fallback image" src="https://github.com/user-attachments/assets/2ec78d19-5ae5-4b7d-866e-8163d6866538" >
-</picture>   <br /> <br />
+$\Large\ H(x, u, \lambda, t) = \frac{1}{2}(x(t) - z(t))^2 + \lambda(t) \cdot u$
 
 Since (in continuous case):
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/910b8560-f47e-4154-aca3-201aeb67c74e"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/47626c44-de6b-4037-9ac1-ed639673d6ad">  
-  <img width="158" height="22" title = "x(t) = x(0) + u\cdot t" alt="fallback image" src="https://github.com/user-attachments/assets/910b8560-f47e-4154-aca3-201aeb67c74e" >
-</picture>   <br /> <br />
+$\Large\ x(t) = x(0) + u\cdot t$
 
 the expression for Pontryagin's Hamiltonian becomes:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/31ec249a-ae79-4923-9c51-ab15a9d0fb6e"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8979626e-1838-49b3-a9d7-428af7c7bf4c">  
-  <img width="351" height="42" title ="\bbox[black]{\color{white}\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u}" alt="fallback image" src="https://github.com/user-attachments/assets/31ec249a-ae79-4923-9c51-ab15a9d0fb6e" >
-</picture>   <br /> <br />
+$\Large\ H(u, \lambda, t) = \frac{1}{2}(x(0) + u \cdot t - z(t))^2 + \lambda(t) \cdot u$
 
 Then for the costate equation we obtain:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/a837f9aa-9ed4-47f2-bd99-96072950aaeb"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/57085eb3-de6a-41c4-ac5e-1c04ca47f436">  
-  <img width="124" height="42" title = "\bbox[black]{\color{white}\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/a837f9aa-9ed4-47f2-bd99-96072950aaeb">
-</picture>   <br /> <br />
+$\Large\frac{d \lambda}{dt} = - \frac{\partial H}{\partial x} = 0$
+
+<br />
 
 Therefore, the costate is constant and we can find its value using the terminal cost condition:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/264aa445-b30e-43b0-8870-56ea18f4d40b">
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/5d93fd8a-5250-400e-95fc-f9d37ae6a7d8">
-  <img width="320 height="42" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/264aa445-b30e-43b0-8870-56ea18f4d40b" >
-</picture>   <br />
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/70bd6475-94cc-4bb5-82dc-1f96c0fbede4"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/763de0c5-77fa-420f-8709-5d0f394ee196"> 
-  <img width="140" height="20" title = "\bbox[black]{\color{white}\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))}" alt="fallback image" src="https://github.com/user-attachments/assets/70bd6475-94cc-4bb5-82dc-1f96c0fbede4" >
-</picture>   <br /> <br />
+$\Large\lambda(t) = \lambda(T)  = \frac{\partial (\frac{1}{2}g\cdot(x(T) - z(T))^2)}{\partial x} = g \cdot (x(T) - z(T))$
+
+<br />
 
 Minimization of the Hamiltonian with respect to *u* yields:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/af68fd86-7a40-4e9e-810b-51ccbde4a505"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/e67694d1-e50c-4433-a9b5-5ce9f3700772">
-  <img width="320" height="42" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/af68fd86-7a40-4e9e-810b-51ccbde4a505" >
-</picture>   <br /> <br />
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/1e63a2d9-82dc-4671-ae84-41164df113a8">
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a85e15aa-3db5-490a-9705-4f84e4e273a7">
-  <img width="360" height="22" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/1e63a2d9-82dc-4671-ae84-41164df113a8" >
-</picture>   <br /> <br />
+$\Large\frac{\partial H}{\partial u} = (x(0) + u \cdot t - z(t)) \cdot t + \lambda (t) = $
+
+$\Large (x(0) + u \cdot t - z(t)) \cdot t + g \cdot (x(T) - z(T)) = 0$
+
+<br />
 
 After discretizing the cost functional and the dynamics we obtain the following optimization problem:
 
 *minimize*
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/7db73ea0-9fe9-49e2-8212-e3199119ebe6">  
-  <img width="360" height="66" title = "\bbox[black]{\color{white}J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2}" alt="fallback image" src="https://github.com/user-attachments/assets/ddb6f054-355e-4668-9e7d-337a7f502900" >
-</picture>   <br /> <br />
+$\Large\ J = \frac{1}{2}\sum_{k=1}^{T-1}(x(k) - z(k))^2 + \frac{1}{2} g\cdot(x(T) - z(T))^2$
 
 *subject to*
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8e0b3eef-8b5f-4f8c-b529-2896e39dc36b"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/aa348cb3-285d-45ef-ab68-0ef29e96df52">  
-  <img width="288" height="22" title = "\bbox[black]{\color{white}x(k + 1) = x(k) + u(k); x(0) = b.}" alt="fallback image" src="https://github.com/user-attachments/assets/8e0b3eef-8b5f-4f8c-b529-2896e39dc36b">
-</picture>   <br /> <br />
+$\Large\ x(k + 1) = x(k) + u(k);\ x(0) = b.$
 
-
+<br />
 
 ## 5. A Linear Regression Problem Solved Via Optimal Control
 
