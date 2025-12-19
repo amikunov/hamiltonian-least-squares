@@ -120,42 +120,27 @@ $\Large\ x(k + 1) = x(k) + u(k);\ x(0) = b.$
 Let's consider a simple linear regression problem and let's first solve it using traditional linear least squares (LLS) and then using our optimal control based approach.
 We have three (x, y) data points: *(1, 1), (2, 3), (3, 2).* We look for a line **y = m * x + b** that fits the data the best by minimizing the sum of squared residuals:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/78c36dfe-bb37-465d-b6b6-4bc3352b3b5a"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/dae18612-d793-44c8-8305-e3e0e9b45d72">  
-  <img width="211" height="28" title = "\bbox[black]{\color{white}S(m, b) = r _1 ^2 + r _2 ^2 + r _3 ^2 = }" alt="fallback image" src="https://github.com/user-attachments/assets/78c36dfe-bb37-465d-b6b6-4bc3352b3b5a" >
-</picture>    <br /> 
+$\Large\ S(m, b) = r _1 ^2 + r _2 ^2 + r _3 ^2 = $
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/30432e65-2841-4963-884a-d83d86b233af"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/fcae7956-330d-4eb4-a48d-f60bafad8ec2">  
-  <img width="335" height="25" title = "\bbox[black]{\color{white}(m \cdot 1 + b - 1)^2 + (m \cdot 2 + b - 3)^2 + (m \cdot 3 + b - 2)^2 }" alt="fallback image" src="https://github.com/user-attachments/assets/30432e65-2841-4963-884a-d83d86b233af" >
-</picture>    <br /> <br />
+$\Large\ (m \cdot 1 + b - 1)^2 + (m \cdot 2 + b - 3)^2 + (m \cdot 3 + b - 2)^2 $
+
+<br />
 
 
 **LLS gives us the following recipe for finding *m* and *b*:**
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8c75db6f-158e-4426-86d2-e54e1f01f321">  
-  <img width="524" height="43" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;}" alt="fallback image" src="https://github.com/user-attachments/assets/efe6475a-67c9-4757-a91c-16924dde9336" >
-</picture>   <br />    <br />
+$\Large\frac{\partial S}{\partial m} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 2 + 2 \cdot (m \cdot 3 + b - 2) \cdot 3 = 0;$
 
+$\Large\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.$
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/86bf73c7-ca3b-4752-977b-cfd6062a9cdc">  
-  <img width="524" height="43" title = "\bbox[black]{\color{white}\frac{\partial S}{\partial b} = 2 \cdot (m \cdot 1 + b - 1) \cdot 1 + 2 \cdot (m \cdot 2 + b - 3) \cdot 1 + 2 \cdot (m \cdot 3 + b - 2) \cdot 1 = 0.}" alt="fallback image" src="https://github.com/user-attachments/assets/db5f7030-17e0-4822-9948-54e9a2f4e65e" >
-</picture>    <br />    <br />
+<br />
 
 
 **Simple algebra yields the final answer:**
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/143b9528-6066-4ec9-862c-29325873d16e">  
-  <img width="236" height="43" title = "\bbox[black]{\color{white}m = \frac {1}{2}; b = 1; y = \frac {1}{2} \cdot x + 1}" alt="fallback image" src="https://github.com/user-attachments/assets/78797cc5-0e0d-412e-8a43-cdebadd02307"> 
-</picture>    <br />    <br />
+$\Large\ m = \frac {1}{2};\ b = 1;\ y = \frac {1}{2} \cdot x + 1$
+
+<br />
 
 
 This code and its output illustrate the above solution:
@@ -197,40 +182,30 @@ plt.title("LS")
 
 Using the expression for:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/321b20ab-3442-409c-937e-293a6b517baa">  
-  <img width="29" height="41" title = "\bbox[black]{\color{white}\frac{\partial H}{\partial u}}" alt="fallback image" src="https://github.com/user-attachments/assets/338739a4-d47e-41d1-a722-2d69a9499d71" > 
-</picture>    <br />    <br />
+$\Large\frac{\partial H}{\partial u}$
+
+<br />
 
 and expanding the gradient of the cost functional:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/c9832216-7671-4790-9270-3aa3748dd0f0"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1bbbd71a-8b26-4144-a278-194889a0883a">  
-  <img width="310" height="58" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/c9832216-7671-4790-9270-3aa3748dd0f0" >
-</picture>    <br />    <br />
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/3bbb9a39-bec8-4ca5-92e6-3b7ff983835f"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/495d2548-65d8-41d9-819f-be3bfe218e57">  
-  <img width="350" height="58" title = "\bbox[black]{\color{white}\nabla _u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = \sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/3bbb9a39-bec8-4ca5-92e6-3b7ff983835f" >
-</picture>    <br />    <br />
+$\Large\nabla_u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = $
+
+$\Large\sum_{k=1}^{T-1} (x(0) + u \cdot k - z(k)) \cdot k) + g \cdot (x(T) - z(T)) = 0$
+
+<br />
 
 we obtain:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/b51e5ba4-7fde-44cd-807d-48102707923c">  
-  <img width="485" height="20" title = "\bbox[black]{\color{white}(x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0}" alt="fallback image" src="https://github.com/user-attachments/assets/d68c0048-f2e1-4a31-9a78-54e66601f149" > 
-</picture>    <br />    <br />
+$\Large\ (x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdot (x(0) + u \cdot 3 - 2) = 0$
+
+<br />
 
 and if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/efa80183-caad-476a-aa99-2eb67e8e95ec"> 
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a4070b2b-9905-47a1-8fdf-99a91ac80f71">  
-  <img width="197" height="44" title = "\bbox[black]{\color{white}u = \frac {1}{2}; x(t) = x(0) + \frac {1}{2} \cdot t}" alt="fallback image" src="https://github.com/user-attachments/assets/efa80183-caad-476a-aa99-2eb67e8e95ec" >
-</picture>    <br />    <br />
+$\Large\ u = \frac {1}{2};\ x(t) = x(0) + \frac {1}{2} \cdot t$
+
+<br />
+<br />
 
 
 
