@@ -184,8 +184,6 @@ Using the expression for:
 
 $\Large\frac{\partial H}{\partial u}$
 
-<br />
-
 and expanding the gradient of the cost functional:
 
 $\large\nabla_u J = \sum_{k=1}^{T-1} \frac{\partial H}{\partial u(k)} + g \cdot (x(T) - z(T)) = $
@@ -200,7 +198,7 @@ $\large\ (x(0) + u \cdot 1 - 1) \cdot 1+ (x(0) + u \cdot 2 - 3) \cdot 2 + g \cdo
 
 <br />
 
-and if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
+And if we let *x(0) = b = 1* and *g = 3* it again yields the same final answer for the slope *u*:
 
 $\large\ u = \frac {1}{2};\ x(t) = x(0) + \frac {1}{2} \cdot t$
 
