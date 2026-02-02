@@ -33,7 +33,7 @@ we are simply building a straight line
 $\large\ y = m \cdot x + b,$
 
 whose slope *m* and y-intercept *b* are adjusted to minimize a sum of squared errors between predicted and actual (measured) y values.
-The dynamic nature becomes even more apparent if we treat *x* as a time coordinate (continuous or discrete) and y as a dynamic state variable. 
+The dynamic nature becomes even more apparent if **we treat *x* as a time coordinate (continuous or discrete) and y as a dynamic state variable.** 
 
 We also rename the slope *m* to *u* (along with other variables) to follow standard optimal control conventions. Hence we get:
 
