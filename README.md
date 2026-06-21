@@ -210,7 +210,7 @@ $\large\ u = \frac {1}{2};\ x(t) = x(0) + \frac {1}{2} \cdot t$
 ## References
 
 <a id="1">[1]</a>
-Stephen Boyd, (2009) [Lecture 1. Linear quadratic regulator: Discrete-time finite horizon](https://stanford.edu/class/ee363/lectures/dlqr.pdf)
+Stanford University, Spring Quarter, (2026) [EE 363: Linear Dynamical Systems](https://ee363.stanford.edu//lectures.html)
 
 <a id="2">[2]</a>
 Arthur E. Bryson, Jr., Yu-Chi Ho, (1975) Applied Optimal Control: Optimization, Estimation and Control, Chapter 2
